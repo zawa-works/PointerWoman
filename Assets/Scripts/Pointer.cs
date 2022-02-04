@@ -36,11 +36,11 @@ public class Pointer : MonoBehaviour
     {
         if (other.tag == "Tit")
         {
-            if (rightJoycon.button != null)
-            {
-                Destroy(other.gameObject);
-                Debug.Log("hoge");
-            }
+            // if (rightJoycon.button != null)
+            // {
+            Destroy(other.gameObject);
+            Debug.Log("hoge");
+            // }
         }
 
     }
