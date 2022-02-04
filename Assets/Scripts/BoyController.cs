@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BoyController : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class BoyController : MonoBehaviour
         if (tit == null && !isAngry)
         {
             this.gameObject.transform.parent = null;
-            this.transform.Translate(0, 0.5f, 0);
             face[0].SetActive(false);
             face[1].SetActive(true);
+            this.transform.DOMoveY(-7, 2f).SetEase(Ease.Linear);
             isAngry = true;
         }
 

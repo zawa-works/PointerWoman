@@ -18,7 +18,7 @@ public class Pointer : MonoBehaviour
     {
 
         var pos = this.transform.position;
-        var gyro = rightJoycon.gyro / 10;
+        var gyro = rightJoycon.gyro / 5;
         if (Mathf.Abs(gyro.z) < 0.01f) gyro.z = 0;
         if (Mathf.Abs(gyro.y) < 0.01f) gyro.y = 0;
 
@@ -36,11 +36,11 @@ public class Pointer : MonoBehaviour
     {
         if (other.tag == "Tit")
         {
-            // if (rightJoycon.button != null)
-            // {
-            Destroy(other.gameObject);
-            Debug.Log("hoge");
-            // }
+            if (rightJoycon.button != null)
+            {
+                Destroy(other.gameObject);
+                Debug.Log("hoge");
+            }
         }
 
     }
